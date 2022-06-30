@@ -9,8 +9,8 @@ entries:
     keywords:
     - qa
     maintainers:
-    - email: diemol@gmail.com
-      name: diemol
+    - email: workwithprashant@gmail.com
+      name: workwithprashant
     name: zalenium
     sources:
     - https://github.com/zalando/zalenium
