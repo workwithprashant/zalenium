@@ -12,7 +12,7 @@ RUN  echo "deb ${UBUNTU_MIRROR} ${UBUNTU_FLAVOR} main universe\n" > /etc/apt/sou
   && echo "deb ${UBUNTU_MIRROR} ${UBUNTU_FLAVOR}-updates main universe\n" >> /etc/apt/sources.list \
   && echo "deb ${UBUNTU_MIRROR} ${UBUNTU_FLAVOR}-security main universe\n" >> /etc/apt/sources.list
 
-LABEL maintainer "Team EP <diemol+team-ep@gmail.com>"
+LABEL maintainer="Prashant Patil <workwithprashant@gmail.com>"
 
 # No interactive frontend during docker build
 ENV DEBIAN_FRONTEND=noninteractive \

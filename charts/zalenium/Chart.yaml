@@ -1,5 +1,5 @@
 name: zalenium
-version: 3.141.59
+version: 3.141.60
 apiVersion: v2
 type: application
 description: Chart for selenium grid
@@ -9,6 +9,6 @@ home: https://github.com/zalando/zalenium
 sources:
   - https://github.com/zalando/zalenium
 maintainers:
-  - name: diemol
-    email: diemol@gmail.com
+  - name: workwithprashant
+    email: workwithprashant@gmail.com
 engine: gotpl
