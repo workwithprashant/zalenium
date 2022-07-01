@@ -36,7 +36,7 @@
         <!-- This needs to match what is in the Selenium Server pom file -->
         <jetty.version>9.4.43.v20210629</jetty.version>
         <docker-client.version>8.15.0</docker-client.version>
-        <kubernetes-client.version>4.13.3</kubernetes-client.version>
+        <kubernetes-client.version>4.1.0</kubernetes-client.version>
         <junit.version>4.13.1</junit.version>
         <mockito.version>2.23.0</mockito.version>
         <awaitility.version>3.1.2</awaitility.version>
