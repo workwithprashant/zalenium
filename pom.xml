@@ -34,17 +34,17 @@
         <selenium-server.major-minor.version>3.141</selenium-server.major-minor.version>
         <selenium-server.patch-level.version>59</selenium-server.patch-level.version>
         <!-- This needs to match what is in the Selenium Server pom file -->
-        <jetty.version>9.4.43.v20210629</jetty.version>
+        <jetty.version>9.4.12.v20180830</jetty.version>
         <docker-client.version>8.15.0</docker-client.version>
         <kubernetes-client.version>4.1.0</kubernetes-client.version>
-        <junit.version>4.13.1</junit.version>
+        <junit.version>4.12</junit.version>
         <mockito.version>2.23.0</mockito.version>
         <awaitility.version>3.1.2</awaitility.version>
         <testng.version>6.14.3</testng.version>
-        <slf4j.version>1.7.36</slf4j.version>
-        <logstash-logback-encoder.version>7.2</logstash-logback-encoder.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <logstash-logback-encoder.version>5.2</logstash-logback-encoder.version>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <ch.qos.logback.version>1.2.11</ch.qos.logback.version>
+        <ch.qos.logback.version>1.2.3</ch.qos.logback.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.plugin>3.7.0</maven.compiler.plugin>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
@@ -54,7 +54,7 @@
         <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
-        <prometheus.version>0.15.0</prometheus.version>
+        <prometheus.version>0.5.0</prometheus.version>
         <aspectj.version>1.8.13</aspectj.version>
         <aspectj-maven-plugin.version>1.11</aspectj-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,14 +99,14 @@
             <artifactId>openshift-client</artifactId>
             <version>${kubernetes-client.version}</version>
             <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>jul-to-slf4j</artifactId>
-               </exclusion>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>slf4j-api</artifactId>
-               </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -141,35 +141,35 @@
         </dependency>
         <!-- The prometheus client -->
         <dependency>
-          <groupId>io.prometheus</groupId>
-          <artifactId>simpleclient</artifactId>
-          <version>${prometheus.version}</version>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient</artifactId>
+            <version>${prometheus.version}</version>
         </dependency>
         <!-- Prometheus Hotspot JVM metrics -->
         <dependency>
-          <groupId>io.prometheus</groupId>
-          <artifactId>simpleclient_hotspot</artifactId>
-          <version>${prometheus.version}</version>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_hotspot</artifactId>
+            <version>${prometheus.version}</version>
         </dependency>
         <!-- Prometheus Exporter Servlet -->
         <dependency>
-          <groupId>io.prometheus</groupId>
-          <artifactId>simpleclient_servlet</artifactId>
-          <version>${prometheus.version}</version>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_servlet</artifactId>
+            <version>${prometheus.version}</version>
         </dependency>
         <!-- Prometheus Jetty -->
         <dependency>
-          <groupId>io.prometheus</groupId>
-          <artifactId>simpleclient_jetty</artifactId>
-          <version>${prometheus.version}</version>
-          <exclusions>
-            <exclusion>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>*</artifactId>
-            </exclusion>
-          </exclusions>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_jetty</artifactId>
+            <version>${prometheus.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <!-- 
+        <!--
         This allows us to add prometheus jetty collectors that expect to find jetty classes in their usual place.
         Selenium has repackaged Jetty, so this makes it available at compile time, before we relocate the classes again.
          -->
